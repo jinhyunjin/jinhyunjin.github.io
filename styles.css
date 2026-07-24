@@ -51,8 +51,8 @@ nav a:hover::after, nav a:focus-visible::after { transform: scaleX(1); transform
 .menu-button { display: none; border: 0; padding: .5rem; background: transparent; }
 
 .hero { min-height: 100svh; position: relative; overflow: hidden; display: grid; grid-template-columns: 44% 56%; }
-.hero-art { height: 100svh; overflow: hidden; background: #8096b4; }
-.hero-art img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; transform: scale(1.01); animation: reveal-image 1.4s cubic-bezier(.22,.61,.36,1) both; }
+.hero-art { height: 100svh; overflow: hidden; padding: clamp(1rem, 3vw, 3rem); background: #8096b4; }
+.hero-art img { width: 100%; height: 100%; object-fit: contain; object-position: 50% 50%; animation: reveal-image 1.4s cubic-bezier(.22,.61,.36,1) both; }
 .hero-copy { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 10rem 8vw 7rem; background: var(--paper); }
 .eyebrow { margin: 0 0 1.5rem; font-size: .68rem; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; }
 .hero h1 { margin: 0; font: 400 clamp(3.7rem, 8vw, 8.6rem)/1.16 var(--serif); letter-spacing: -.05em; animation: rise .9s .25s both; }
@@ -69,14 +69,11 @@ nav a:hover::after, nav a:focus-visible::after { transform: scaleX(1); transform
 .section-heading > p:last-child { max-width: 32rem; margin: 0 auto; font-family: var(--serif); color: #4f4d47; }
 
 .works { background: var(--paper-light); }
-.work-grid { max-width: 1500px; margin: auto; display: grid; grid-template-columns: repeat(12, 1fr); gap: clamp(2rem, 5vw, 6.5rem) 2.4vw; }
-.work-card { grid-column: span 4; margin: 0; cursor: zoom-in; }
-.work-card:nth-child(5n + 1), .work-card:nth-child(5n + 4) { grid-column: span 5; }
-.work-card:nth-child(5n + 2), .work-card:nth-child(5n + 5) { grid-column: span 3; align-self: end; }
-.work-card:nth-child(5n + 3) { grid-column: span 4; margin-top: 7vw; }
+.work-grid { max-width: 1500px; margin: auto; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(3rem, 6vw, 7rem) clamp(1.2rem, 2.8vw, 3rem); }
+.work-card { min-width: 0; margin: 0; cursor: zoom-in; }
 .work-card.hidden { display: none; }
-.work-image { overflow: hidden; background: #ddd8ce; }
-.work-image img { width: 100%; aspect-ratio: var(--ratio, 3/4); object-fit: cover; transition: transform .7s cubic-bezier(.2,.7,.2,1); }
+.work-image { display: flex; align-items: center; justify-content: center; aspect-ratio: 4 / 5; overflow: hidden; padding: clamp(.65rem, 1.5vw, 1.5rem); background: #e8e4dc; }
+.work-image img { width: 100%; height: 100%; object-fit: contain; transition: transform .7s cubic-bezier(.2,.7,.2,1); }
 .work-card:hover img { transform: scale(1.025); }
 .work-card figcaption { margin-top: 1rem; display: grid; grid-template-columns: 1fr auto; gap: .2rem 1rem; font-size: .72rem; line-height: 1.5; }
 .work-title { font-family: var(--serif); font-size: .84rem; }
@@ -133,7 +130,7 @@ footer > a:last-child { justify-self: end; }
 
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s, transform .8s; }
 .reveal.visible { opacity: 1; transform: none; }
-@keyframes reveal-image { from { opacity: 0; transform: scale(1.08); } }
+@keyframes reveal-image { from { opacity: 0; } }
 @keyframes rise { from { opacity: 0; transform: translateY(28px); } }
 
 @media (max-width: 800px) {
@@ -151,9 +148,8 @@ footer > a:last-child { justify-self: end; }
   .hero-sub { margin: 1.2rem 0 2rem; }
   .hero-caption { top: calc(58svh - 11rem); bottom: auto; left: 1rem; }
   .section { padding-left: 1.25rem; padding-right: 1.25rem; }
-  .work-grid { gap: 4.5rem 1rem; }
-  .work-card, .work-card:nth-child(n) { grid-column: span 6; margin-top: 0; }
-  .work-card:nth-child(3n+2) { margin-top: 5rem; }
+  .work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4.5rem 1rem; }
+  .work-card { margin-top: 0; }
   .work-card figcaption { display: block; }
   .work-year { float: right; }
   .statement { display: block; position: relative; overflow: hidden; }
@@ -172,8 +168,8 @@ footer > a:last-child { justify-self: end; }
 }
 
 @media (max-width: 480px) {
-  .work-grid { display: block; }
-  .work-card, .work-card:nth-child(n) { margin: 0 0 4.5rem; }
+  .work-grid { grid-template-columns: 1fr; }
+  .work-card { margin: 0 0 2rem; }
   .section-action { margin-top: 2rem; }
 }
 
