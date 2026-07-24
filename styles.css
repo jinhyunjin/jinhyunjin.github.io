@@ -84,12 +84,13 @@ nav a:hover::after, nav a:focus-visible::after { transform: scaleX(1); transform
 .outline-button span { margin-left: 1rem; }
 .outline-button:hover { background: var(--ink); color: white; }
 
-.statement { min-height: 100vh; display: grid; grid-template-columns: .8fr 1.2fr; gap: 7vw; align-items: center; background: #b64734; color: #f7eee2; }
-.statement-mark { font: 300 clamp(13rem, 30vw, 30rem)/.75 var(--serif); opacity: .18; text-align: center; }
-.statement-body { max-width: 660px; }
+.statement { min-height: 100vh; display: flex; align-items: center; background: #b64734; color: #f7eee2; }
+.statement-mark { display: none; }
+.statement-body { width: min(100%, 780px); margin: 0 auto; }
 .statement-body h2 { margin: 0 0 4rem; font: 400 clamp(2rem, 4vw, 4rem)/1.4 var(--serif); letter-spacing: -.04em; }
-.statement-copy { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem 2.5rem; font-size: .83rem; }
-.statement-copy p:first-child { grid-column: 1/-1; font: 300 clamp(1.05rem, 1.5vw, 1.35rem)/1.9 var(--serif); }
+.statement-copy { font-size: .9rem; word-break: keep-all; overflow-wrap: break-word; text-wrap: pretty; }
+.statement-copy p { max-width: 680px; margin: 0 0 1.8rem; }
+.statement-copy p:first-child { font: 300 clamp(1.05rem, 1.5vw, 1.35rem)/1.9 var(--serif); }
 
 .about { padding-top: clamp(8rem, 15vw, 14rem); background: var(--paper); }
 .about-title { display: grid; grid-template-columns: 1fr 2fr; align-items: start; border-bottom: 1px solid var(--ink); padding-bottom: 4rem; }
@@ -155,10 +156,7 @@ footer > a:last-child { justify-self: end; }
   .work-card { margin-top: 0; }
   .work-card figcaption { display: block; }
   .work-year { float: right; }
-  .statement { display: block; position: relative; overflow: hidden; }
-  .statement-mark { display: none; }
-  .statement-body { position: relative; }
-  .statement-copy { display: block; }
+  .statement { display: block; }
   .statement-copy p { margin-bottom: 1.5rem; }
   .about-title, .about-columns { display: block; }
   .about-title h2 { margin-top: 2rem; }
