@@ -1,0 +1,7 @@
+# The source portfolio includes private contact details and is not deployed.
+*.pdf
+
+# Auxiliary extraction files not used by the website.
+*.ppm
+assets/artworks/raw-005.jpg
+assets/artworks/raw-008.jpg
