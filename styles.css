@@ -43,6 +43,7 @@ img { display: block; max-width: 100%; }
   border-color: var(--line); backdrop-filter: blur(12px);
 }
 .brand { display: flex; flex-direction: column; line-height: 1.1; font-size: .66rem; letter-spacing: .18em; }
+.site-header:not(.scrolled) > .brand { color: white; text-shadow: 0 1px 12px rgba(0, 0, 0, .28); }
 .brand span:first-child { font-family: var(--serif); font-size: 1.1rem; letter-spacing: .4em; margin-bottom: .25rem; }
 nav { display: flex; gap: clamp(1rem, 2.5vw, 2.8rem); font-size: .75rem; letter-spacing: .08em; }
 nav a { position: relative; padding: .5rem 0; }
@@ -136,6 +137,8 @@ footer > a:last-child { justify-self: end; }
 @media (max-width: 800px) {
   .site-header { height: 68px; padding: 0 1.2rem; }
   .menu-button { display: grid; gap: 6px; z-index: 2; }
+  .site-header:not(.scrolled) .menu-button { color: white; filter: drop-shadow(0 1px 6px rgba(0, 0, 0, .3)); }
+  .menu-open .site-header .brand, .menu-open .site-header .menu-button { color: var(--ink); text-shadow: none; filter: none; }
   .menu-button i { display: block; width: 24px; height: 1px; background: currentColor; transition: .25s; }
   .menu-open .menu-button i:first-of-type { transform: translateY(3.5px) rotate(45deg); }
   .menu-open .menu-button i:last-of-type { transform: translateY(-3.5px) rotate(-45deg); }
