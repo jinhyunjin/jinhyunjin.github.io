@@ -142,18 +142,18 @@ footer > a:last-child { justify-self: end; }
   nav { display: none; position: fixed; inset: 0; background: var(--paper); flex-direction: column; align-items: center; justify-content: center; gap: 1.5rem; font: 300 1.7rem var(--serif); }
   .menu-open nav { display: flex; }
   .hero { display: block; min-height: 100svh; }
-  .hero-art { height: 58svh; }
-  .hero-copy { min-height: 42svh; padding: 4rem 1.5rem 3rem; }
+  .hero-art { height: 44svh; }
+  .hero-copy { min-height: 56svh; padding: 3.5rem 1.5rem 3rem; }
   .hero h1 { font-size: clamp(3.6rem, 18vw, 5.7rem); }
   .hero-sub { margin: 1.2rem 0 2rem; }
-  .hero-caption { top: calc(58svh - 11rem); bottom: auto; left: 1rem; }
+  .hero-caption { top: calc(44svh - 9rem); bottom: auto; left: 1rem; }
   .section { padding-left: 1.25rem; padding-right: 1.25rem; }
   .work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4.5rem 1rem; }
   .work-card { margin-top: 0; }
   .work-card figcaption { display: block; }
   .work-year { float: right; }
   .statement { display: block; position: relative; overflow: hidden; }
-  .statement-mark { position: absolute; top: 8rem; right: -3rem; font-size: 19rem; }
+  .statement-mark { display: none; }
   .statement-body { position: relative; }
   .statement-copy { display: block; }
   .statement-copy p { margin-bottom: 1.5rem; }
