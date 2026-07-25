@@ -9,7 +9,7 @@
 - 정식 저장소: `https://github.com/jinhyunjin/jinhyunjin.github.io`
 - 백업 저장소: `https://github.com/jmmok82/jinhyunjin`
 - 기술 구성: 빌드 과정 없는 HTML, CSS, JavaScript
-- 배포: `.github/workflows/deploy.yml`을 통한 GitHub Pages 자동 배포
+- 배포: GitHub Pages의 `main` 브랜치 `/ (root)` 직접 배포
 - 기본 브랜치: `main`
 
 현재 작업 PC에서는 정식 저장소의 원격 이름이 `artist-site`, 백업 저장소의 원격 이름이 `origin`이다. 다른 PC에서 정식 저장소를 새로 clone하면 정식 저장소가 `origin`이 된다. 원격 이름을 추측하지 말고 항상 `git remote -v`로 URL을 확인한다.
@@ -21,7 +21,6 @@
 - `styles.css`: 반응형 레이아웃과 모든 시각 디자인
 - `script.js`: 작품 데이터, 갤러리, 확대 보기, 모바일 메뉴
 - `assets/artworks/`: 웹 공개용 작품 이미지
-- `.github/workflows/deploy.yml`: GitHub Pages 배포
 - `README.md`: 콘텐츠 점검표와 간단한 사용법
 - `DEPLOYMENT.md`: 다른 PC 설정과 배포 운영법
 
@@ -61,7 +60,7 @@ python3 -m http.server 8000
 4. 데스크톱과 모바일에서 첫 화면, 갤러리, Artist Statement, 모바일 메뉴, 작품 확대 보기를 확인한다.
 5. 커밋 전 `git status --short`와 `git diff`를 검토한다.
 6. 의미가 분명한 영문 커밋 메시지를 사용한다.
-7. 정식 저장소에 먼저 push하고 GitHub Actions 성공 및 실제 사이트 응답을 확인한다.
+7. 정식 저장소에 먼저 push하고 GitHub Pages 배포 및 실제 사이트 응답을 확인한다.
 8. 가능하면 백업 저장소에도 같은 `main`을 push한다.
 
 ## 배포 명령
@@ -81,7 +80,7 @@ git push origin main
 
 push 후 다음을 확인한다.
 
-- Actions: `https://github.com/jinhyunjin/jinhyunjin.github.io/actions`
+- Deployments: `https://github.com/jinhyunjin/jinhyunjin.github.io/deployments`
 - 공개 사이트: `https://jinhyunjin.github.io/`
 
 GitHub Pages 캐시는 잠시 남을 수 있다. 모바일에서 이전 화면이 보이면 Safari 개인정보 보호 탭으로 확인하거나 해당 `github.io` 웹사이트 데이터를 삭제한다.
