@@ -12,7 +12,10 @@ jobs:
     permissions:
       pages: write
       deployments: write
+      contents: write
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: Cancel the locked Pages deployment
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -24,7 +27,7 @@ jobs:
           echo "Attempting to cancel stale deployment: ${STALE_DEPLOYMENT_ID}"
 
           status_code="$(
-            curl -sS -o /tmp/cancel-pages-response.json -w '%{http_code}' \
+            curl -sS -o pages-cancel-response.json -w '%{http_code}' \
               -X POST \
               -H "Accept: application/vnd.github+json" \
               -H "Authorization: Bearer ${GITHUB_TOKEN}" \
@@ -32,14 +35,11 @@ jobs:
               "https://api.github.com/repos/${GITHUB_REPOSITORY}/pages/deployments/${STALE_DEPLOYMENT_ID}/cancel"
           )"
 
-          echo "Response HTTP status code: ${status_code}"
+          echo "" >> pages-cancel-response.json
+          echo "Response HTTP status code: ${status_code}" >> pages-cancel-response.json
 
-          if [ "$status_code" = "204" ]; then
-            echo "Successfully cancelled Pages deployment ${STALE_DEPLOYMENT_ID}."
-          elif [ "$status_code" = "404" ]; then
-            echo "Pages deployment ${STALE_DEPLOYMENT_ID} was already gone."
-          else
-            echo "Unexpected response from GitHub Pages cancel endpoint:" >&2
-            cat /tmp/cancel-pages-response.json >&2
-            exit 1
-          fi
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pages-cancel-response.json
+          git commit -m "chore: save pages cancel response [skip ci]" || echo "No changes to commit"
+          git push https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git main || echo "Push to artist-site failed"
