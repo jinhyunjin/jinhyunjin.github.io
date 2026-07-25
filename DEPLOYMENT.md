@@ -1,6 +1,6 @@
 # 다른 PC에서 작업하고 GitHub Pages에 배포하기
 
-정식 저장소의 `main` 브랜치에 변경 사항이 올라오면 GitHub Pages가 저장소 루트를 `https://jinhyunjin.github.io/`에 자동 배포합니다.
+정식 저장소의 `main` 브랜치에 변경 사항이 올라오면 GitHub Actions가 `https://jinhyunjin.github.io/`에 자동 배포합니다.
 
 ## 1. 새 PC에 프로젝트 받기
 
@@ -58,9 +58,9 @@ HTTPS에서 암호를 요구하면 GitHub 계정 비밀번호 대신 Personal Ac
 
 push 후 다음을 확인합니다.
 
-1. `https://github.com/jinhyunjin/jinhyunjin.github.io/deployments`
-2. `github-pages` 배포가 성공했는지 확인
-3. `https://jinhyunjin.github.io/`와 `https://jinhyunjin.github.io/en/`에서 실제 화면 확인
+1. `https://github.com/jinhyunjin/jinhyunjin.github.io/actions`
+2. `Deploy static site to GitHub Pages` 작업이 성공했는지 확인
+3. `https://jinhyunjin.github.io/`에서 실제 화면 확인
 
 ## 5. 백업 저장소 동기화
 
@@ -81,7 +81,8 @@ GitHub의 **Settings → Pages → Custom domain**에 도메인을 입력합니�
 
 ## 문제 해결
 
-- 배포가 시작되지 않음: Settings → Pages의 Source가 `Deploy from a branch`, Branch가 `main`, Folder가 `/ (root)`인지 확인합니다.
+- 배포가 시작되지 않음: 기본 브랜치가 `main`인지 확인하고 Settings → Pages의 Source가 GitHub Actions인지 확인합니다.
+- Pages 권한 오류: **Settings → Actions → General → Workflow permissions**와 Pages Source 설정을 확인합니다.
 - CSS나 이미지가 안 보임: 파일명 대소문자와 상대 경로를 확인합니다.
-- 변경이 바로 안 보임: Deployments 완료 후 강력 새로고침하거나 모바일 개인정보 보호 탭에서 확인합니다.
+- 변경이 바로 안 보임: Actions 완료 후 강력 새로고침하거나 모바일 개인정보 보호 탭에서 확인합니다.
 - iPhone 캐시: 설정 → 앱 → Safari → 고급 → 웹사이트 데이터에서 `github.io` 데이터를 삭제합니다.
