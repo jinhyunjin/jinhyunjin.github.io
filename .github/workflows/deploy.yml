@@ -30,6 +30,7 @@ jobs:
           mkdir _site
           cp index.html styles.css script.js .nojekyll _site/
           cp -R assets _site/assets
+          cp -R en _site/en
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:

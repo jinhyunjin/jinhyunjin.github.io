@@ -5,6 +5,7 @@
 ## 프로젝트 개요
 
 - 정식 사이트: `https://jinhyunjin.github.io/`
+- 영문 사이트: `https://jinhyunjin.github.io/en/`
 - 정식 저장소: `https://github.com/jinhyunjin/jinhyunjin.github.io`
 - 백업 저장소: `https://github.com/jmmok82/jinhyunjin`
 - 기술 구성: 빌드 과정 없는 HTML, CSS, JavaScript
@@ -16,6 +17,7 @@
 ## 주요 파일
 
 - `index.html`: 페이지 구조, 작가 소개, 작가노트, 전시, 연락처
+- `en/index.html`: 동일한 구조의 영문 페이지
 - `styles.css`: 반응형 레이아웃과 모든 시각 디자인
 - `script.js`: 작품 데이터, 갤러리, 확대 보기, 모바일 메뉴
 - `assets/artworks/`: 웹 공개용 작품 이미지
@@ -32,6 +34,7 @@
 - Artist Statement는 한자 장식 없이 단일 컬럼으로 표시한다.
 - 한국어 본문은 `word-break: keep-all`과 `text-wrap: pretty`를 유지해 외톨이 글자를 줄인다.
 - 첫 화면의 작가명은 작품 위에서 흰색, 스크롤된 밝은 헤더에서는 검정색이다.
+- 한국어와 영문 페이지의 구성과 작품 순서를 동일하게 유지하고, 양쪽 언어 전환 링크를 함께 관리한다.
 - 모바일, 키보드 탐색, `prefers-reduced-motion` 접근성을 훼손하지 않는다.
 
 ## 콘텐츠와 개인정보

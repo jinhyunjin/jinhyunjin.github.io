@@ -6,6 +6,9 @@
 
 **[jinhyunjin.github.io 방문하기](https://jinhyunjin.github.io/)**
 
+- 한국어: [jinhyunjin.github.io](https://jinhyunjin.github.io/)
+- English: [jinhyunjin.github.io/en/](https://jinhyunjin.github.io/en/)
+
 ## 로컬 확인
 
 ```bash
