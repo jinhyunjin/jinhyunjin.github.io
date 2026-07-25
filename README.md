@@ -2,6 +2,10 @@
 
 진현진 작가의 작업 세계와 2024–2025년 주요 작품을 소개하는 정적 웹사이트입니다. 별도 빌드 도구 없이 HTML, CSS, JavaScript로 구성되어 GitHub Pages에 바로 배포할 수 있습니다.
 
+## 공식 홈페이지
+
+**[jinhyunjin.github.io 방문하기](https://jinhyunjin.github.io/)**
+
 ## 로컬 확인
 
 ```bash
