@@ -96,17 +96,22 @@ html[lang="en"] .hero h1 { font-size: clamp(3rem, 6vw, 6.4rem); line-height: 1.1
 .statement-copy p:first-child { font: 300 clamp(1.05rem, 1.5vw, 1.35rem)/1.9 var(--serif); }
 
 .about { padding-top: clamp(8rem, 15vw, 14rem); background: var(--paper); }
-.about-title { display: grid; grid-template-columns: 1fr 2fr; align-items: start; border-bottom: 1px solid var(--ink); padding-bottom: 4rem; }
+.about-title {
+  display: block; width: min(100%, 860px); margin: 0 auto; padding-bottom: 4rem;
+  border-bottom: 1px solid var(--ink); text-align: center;
+}
+.about-title .eyebrow { margin-bottom: 1.75rem; }
 .about-title h2 { margin: 0; }
 .about-title h2 span { font-family: var(--sans); font-size: .19em; font-weight: 400; letter-spacing: .22em; }
-.about-columns { display: block; width: min(100%, 1000px); margin: 0 auto; padding-top: 2rem; }
-.cv-section { padding: 3rem 0; border-bottom: 1px solid var(--line); }
+.about-columns { display: block; width: min(100%, 860px); margin: 0 auto; padding-top: 1rem; }
+.cv-section { padding: 3.25rem 0; border-bottom: 1px solid var(--line); }
+.cv-section > h3 { text-align: center; }
 .about h3 { font: 500 .77rem var(--sans); letter-spacing: .08em; margin: 0 0 2rem; }
-.about ul { list-style: none; padding: 0; margin: 0; font-family: var(--serif); font-size: .88rem; }
+.about ul { list-style: none; padding: 0; margin: 0; font-family: var(--serif); font-size: .88rem; text-align: center; }
 .about li { margin-bottom: 1rem; word-break: keep-all; overflow-wrap: break-word; text-wrap: pretty; }
 .about time { display: inline-block; width: 3.5rem; color: #757169; font-family: var(--sans); font-size: .73rem; }
 .cv-toggle {
-  margin-top: .8rem; padding: .45rem 0; border: 0; border-bottom: 1px solid currentColor;
+  display: block; margin: .8rem auto 0; padding: .45rem 0; border: 0; border-bottom: 1px solid currentColor;
   background: transparent; cursor: pointer; font-size: .72rem; letter-spacing: .06em;
 }
 .cv-toggle:hover, .cv-toggle:focus-visible { color: var(--red); }
