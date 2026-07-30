@@ -39,7 +39,7 @@ render updates automatically.
 
 ## Exhibitions & Activities
 
-- (Scheduled) 2026.10.15-10.18 《2026 Historic House Art Festa》, Imcheonggak House, Andong
+- (Scheduled) 2026.10.15-10.18 《2026 GOTAEK ART FESTA》, Imcheonggak House, Andong
 - (Scheduled) 2026.8.6-8.9 《Bank Artfair》, Suwon Convention Center, Suwon
 - 2026.7.26-8.22 《Mind, Rising》, Solo Exhibition, Dongtan Beodeunamu Craft, Hwaseong
 - 2026.7.17-7.19 《GAF Seoul Preview — Time Traveler Information Center》, Look Inside Gallery, Seoul
@@ -49,7 +49,7 @@ render updates automatically.
 - 2026.2.24-2.28 《Balwon》, Solo Exhibition, Hwaseong Open Culture & Art Space, Hwaseong
 - 2025.12.27-2026.1.5 《Balwon: Wishing, Again and Again》, Solo Exhibition, Gallery Hanok, Seoul
 - 2025.12.18-12.24 《3rd Dongguk University Buddhist Art Association Exhibition》, Dongguk Gallery, Seoul
-- 2025.9.24-9.28 《2025 Historic House Art Festa》, Imcheonggak House, Andong
+- 2025.9.24-9.28 《2025 GOTAEK ART FESTA》, Imcheonggak House, Andong
 - 2025.9.9-9.23 《Layers to Bloom》, Kim Minji & Jin Hyun-jin, Gallery Trin, Incheon
 - 2025.9.1-9.30 《Pagoda in Bloom》, Solo Exhibition, Suwon SK Artrium Art Gallery, Suwon
 - 2025.7.18-7.23 《ZERO BASE》, Seoul Auction Gangnam Center, Seoul
