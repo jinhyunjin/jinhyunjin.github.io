@@ -20,9 +20,16 @@ python3 -m http.server 8000
 ## 콘텐츠 수정
 
 - 작품 정보: `script.js`의 `works` 배열
-- 작가 소개, 전시, 연락처: `index.html`
+- 한국어 작가 이력과 전시: `ARTIST_CV.md`
+- 영문 작가 이력과 전시: `ARTIST_CV_EN.md`
+- 작가노트와 연락처: `index.html`, `en/index.html`
 - 색상과 레이아웃: `styles.css`
 - 작품 이미지: `assets/artworks`
+
+작가 이력과 전시는 위의 Markdown 파일에서 수정하면 됩니다. `##` 섹션 제목과
+`-`로 시작하는 항목 형식을 유지한 채 내용을 추가하고 `main` 브랜치에 push하면,
+GitHub Pages 배포 후 홈페이지에 자동 반영됩니다. 수상은 처음 4개, 전시는 처음
+7개를 보여주며 나머지는 방문자가 `더 보기` 버튼으로 펼칠 수 있습니다.
 
 ## 공개 전 확인할 내용
 

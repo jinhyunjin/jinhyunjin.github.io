@@ -20,6 +20,8 @@
 - `en/index.html`: 동일한 구조의 영문 페이지
 - `styles.css`: 반응형 레이아웃과 모든 시각 디자인
 - `script.js`: 작품 데이터, 갤러리, 확대 보기, 모바일 메뉴
+- `ARTIST_CV.md`: 한국어 학력·수상·소장처·선정·전시 이력의 홈페이지 원본
+- `ARTIST_CV_EN.md`: 영문 학력·수상·소장처·선정·전시 이력의 홈페이지 원본
 - `assets/artworks/`: 웹 공개용 작품 이미지
 - `.github/workflows/deploy.yml`: GitHub Pages 배포
 - `README.md`: 콘텐츠 점검표와 간단한 사용법
@@ -35,6 +37,7 @@
 - 한국어 본문은 `word-break: keep-all`과 `text-wrap: pretty`를 유지해 외톨이 글자를 줄인다.
 - 첫 화면의 작가명은 작품 위에서 흰색, 스크롤된 밝은 헤더에서는 검정색이다.
 - 한국어와 영문 페이지의 구성과 작품 순서를 동일하게 유지하고, 양쪽 언어 전환 링크를 함께 관리한다.
+- 작가 이력과 전시는 HTML에 직접 중복 입력하지 않고 `ARTIST_CV.md`와 `ARTIST_CV_EN.md`에서 관리한다. `##` 제목과 `-` 목록 형식을 유지한다.
 - 모바일, 키보드 탐색, `prefers-reduced-motion` 접근성을 훼손하지 않는다.
 
 ## 콘텐츠와 개인정보
