@@ -21,25 +21,24 @@ render updates automatically.
 - 2025 Selected, 10th Cheontae Art Competition
 - 2025 Selected, 29th Na Hye-seok Art Competition
 - 2025 Grand Prize, 4th Gallery Hanok Buddhist Painting & Minhwa Competition
-- 2018 Honorable Mention for 《Water-Moon Avalokiteshvara》, 3rd Cheontae Art Competition
-- 2016 Excellence Award for 《Amitabha Buddha Painting of Guinsa Temple》, 1st Cheontae Art Competition
-- 2015 Selected for 《Ksitigarbha Bodhisattva》, 28th Korea Buddhist Art Exhibition
+- 2018 Honorable Mention, 3rd Cheontae Art Competition
+- 2016 Excellence Award, 1st Cheontae Art Competition
+- 2015 Selected, 28th Korea Buddhist Art Exhibition
 
 ## Collections
 
-- 2024 《Pagoda in Bloom 3》, Gyeonggi Cultural Foundation
-- 2023 《Jowangtaeng》, Daewonsa Temple, Korean Buddhist Geumgang Seonwon, Pocheon
-- 2019 《Water-Moon Avalokiteshvara》, International Seon Center, Jogye Order of Korean Buddhism
+- Gyeonggi Cultural Foundation
+- Daewonsa Temple, Korean Buddhist Geumgang Seonwon, Pocheon
+- International Seon Center, Jogye Order of Korean Buddhism
 
 ## Selections & Residencies
 
 - 2026 Artist-in-Residence, Evo Media Residency
-- 2025.07 Selected Artist, ZERO BASE, Seoul Auction × Hwaseong City Cultural Foundation
-- 2025.04 Selected Local Artist, 2025 Breeze Art Fair, Hwaseong
+- 2025 Selected Artist, ZERO BASE, Seoul Auction × Hwaseong City Cultural Foundation
+- 2025 Selected Local Artist, 2025 Breeze Art Fair, Hwaseong
 
 ## Exhibitions & Activities
 
-- (Scheduled) 2026.11.10-11.22 《Layers of Time》, Solo Exhibition, Buksuwon Exhibition Hall, Suwon
 - (Scheduled) 2026.10.15-10.18 《2026 Historic House Art Festa》, Imcheonggak House, Andong
 - (Scheduled) 2026.8.6-8.9 《Bank Artfair》, Suwon Convention Center, Suwon
 - 2026.7.26-8.22 《Mind, Rising》, Solo Exhibition, Dongtan Beodeunamu Craft, Hwaseong
