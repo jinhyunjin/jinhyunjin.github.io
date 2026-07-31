@@ -22,7 +22,10 @@
 - `index.html`: 한국어 페이지 구조, 작가 소개, 작가노트, CV·전시 표시 영역, 연락처
 - `en/index.html`: 동일한 구조의 영문 페이지
 - `styles.css`: 반응형 레이아웃과 모든 시각 디자인
-- `script.js`: 작품 데이터, CV Markdown 렌더링, 더 보기, 갤러리, 확대 보기, 모바일 메뉴
+- `script.js`: 작품 JSON·CV Markdown 렌더링, 더 보기, 갤러리, 확대 보기, 모바일 메뉴
+- `data/artworks.json`: 한국어·영문 작품 정보, 표시 순서, 대표작의 단일 원본
+- `ARTWORKS_GUIDE.md`: 작품 추가·순서·대표작 수정 방법
+- `scripts/validate-artworks.mjs`: JSON 형식·이미지·대표작 검증
 - `ARTIST_CV.md`: 한국어 학력·수상·소장처·선정·전시 이력의 홈페이지 원본
 - `ARTIST_CV_EN.md`: 영문 학력·수상·소장처·선정·전시 이력의 홈페이지 원본
 - `assets/artworks/`: 웹 공개용 작품 이미지
@@ -36,6 +39,7 @@
 - 데스크톱 첫 화면은 대표 작품을 화면에 꽉 채우는 몰입형 구성을 유지한다.
 - 모바일 첫 화면 작품 높이는 `44svh`이며, 소개 문구가 첫 화면에서 충분히 보이게 한다.
 - 작품 목록은 동일한 4:5 프레임을 사용하고 `object-fit: contain`으로 원본 전체를 보여준다. 작품을 잘라내는 `cover`를 갤러리에 사용하지 않는다.
+- 작품은 `data/artworks.json` 배열 순서로 표시하고 처음 6개만 보여준다. `hero: true`는 정확히 하나의 작품에만 설정한다.
 - Artist Statement는 한자 장식 없이 단일 컬럼으로 표시한다.
 - About은 작가명, 카테고리 제목과 이력 내용을 860px 이내의 중앙 정렬 단일 컬럼으로 표시한다.
 - 한국어 본문은 `word-break: keep-all`과 `text-wrap: pretty`를 유지해 외톨이 글자를 줄인다.
@@ -60,6 +64,7 @@
 3. 다음 항목을 검증한다.
 
 ```bash
+node scripts/validate-artworks.mjs
 node --check script.js
 git diff --check
 python3 -m http.server 8000

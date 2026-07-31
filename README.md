@@ -19,12 +19,19 @@ python3 -m http.server 8000
 
 ## 콘텐츠 수정
 
-- 작품 정보: `script.js`의 `works` 배열
+- 작품 정보·순서·대표작: `data/artworks.json`
 - 한국어 작가 이력과 전시: `ARTIST_CV.md`
 - 영문 작가 이력과 전시: `ARTIST_CV_EN.md`
 - 작가노트와 연락처: `index.html`, `en/index.html`
 - 색상과 레이아웃: `styles.css`
 - 작품 이미지: `assets/artworks`
+
+작품을 추가하거나 순서를 바꾸는 방법은 `ARTWORKS_GUIDE.md`를 참고하세요.
+작품 데이터와 이미지는 다음 명령으로 검증할 수 있습니다.
+
+```bash
+node scripts/validate-artworks.mjs
+```
 
 작가 이력과 전시는 위의 Markdown 파일에서 수정하면 됩니다. `##` 섹션 제목과
 `-`로 시작하는 항목 형식을 유지한 채 내용을 추가하고 `main` 브랜치에 push하면,

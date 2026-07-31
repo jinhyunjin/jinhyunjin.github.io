@@ -2,7 +2,10 @@ const isEnglish = document.documentElement.lang.startsWith("en");
 const artworkPath = isEnglish ? "../assets/artworks/" : "assets/artworks/";
 const copy = {
   artist: isEnglish ? "Jin, Hyun-jin" : "진현진",
-  view: isEnglish ? "View artwork in detail" : "작품 크게 보기"
+  view: isEnglish ? "View artwork in detail" : "작품 크게 보기",
+  worksError: isEnglish
+    ? "The artwork list could not be loaded. Please refresh the page."
+    : "작품 목록을 불러오지 못했습니다. 페이지를 새로고침해 주세요."
 };
 const cvCopy = isEnglish ? {
   path: "../ARTIST_CV_EN.md",
@@ -39,30 +42,9 @@ const cvCopy = isEnglish ? {
 const ABOUT_INITIAL_ITEMS = 4;
 const EXHIBITION_INITIAL_ITEMS = 7;
 
-const works = [
-  { image: "raw-000.jpg", title: "To Freely Bloom 14", year: "2024", meta: "한지에 신암채 · 72.7 × 53 cm", metaEn: "New mineral pigments on hanji · 72.7 × 53 cm" },
-  { image: "raw-001.jpg", title: "To Freely Bloom 7", year: "2024", meta: "한지에 신암채 · 41 × 32 cm", metaEn: "New mineral pigments on hanji · 41 × 32 cm" },
-  { image: "raw-002.jpg", title: "無盡之境 01", titleEn: "Boundless Realm 01", year: "2025", meta: "한지에 신암채, 은분 · 65.1 × 50 cm", metaEn: "New mineral pigments and silver powder on hanji · 65.1 × 50 cm" },
-  { image: "raw-003.jpg", title: "無盡之境 02", titleEn: "Boundless Realm 02", year: "2025", meta: "한지에 신암채, 은분, 금분, 스와로브스키 · 72.7 × 60.6 cm", metaEn: "New mineral pigments, silver and gold powder, Swarovski crystals on hanji · 72.7 × 60.6 cm" },
-  { image: "raw-004.jpg", title: "To Freely Bloom 6", year: "2024", meta: "한지에 신암채 · 41 × 32 cm", metaEn: "New mineral pigments on hanji · 41 × 32 cm" },
-  { image: "raw-007.jpg", title: "심향(心向)", titleEn: "Direction of the Heart", year: "2025", meta: "한지에 신암채, 금박, 스와로브스키 · 40 × 80 cm", metaEn: "New mineral pigments, gold leaf, Swarovski crystals on hanji · 40 × 80 cm" },
-  { image: "raw-011.jpg", title: "無盡寶塔", titleEn: "Infinite Treasure Pagoda", year: "2025", meta: "삼베에 신암채, 스와로브스키 · 121.9 × 61 cm", metaEn: "New mineral pigments and Swarovski crystals on hemp · 121.9 × 61 cm" },
-  { image: "raw-012.jpg", title: "To Freely Bloom 24", year: "2025", meta: "한지에 신암채, 자개, 스와로브스키 · 50 × 20 cm", metaEn: "New mineral pigments, mother-of-pearl, Swarovski crystals on hanji · 50 × 20 cm" },
-  { image: "raw-013.jpg", title: "To Freely Bloom 25", year: "2025", meta: "한지에 신암채, 자개, 스와로브스키 · 50 × 20 cm", metaEn: "New mineral pigments, mother-of-pearl, Swarovski crystals on hanji · 50 × 20 cm" },
-  { image: "raw-014.jpg", title: "To Freely Bloom 26", year: "2025", meta: "한지에 신암채, 은분, 스와로브스키 · 50 × 20 cm", metaEn: "New mineral pigments, silver powder, Swarovski crystals on hanji · 50 × 20 cm" },
-  { image: "raw-015.jpg", title: "To Freely Bloom 18", year: "2024", meta: "한지에 혼합재료 · 72.7 × 53 cm", metaEn: "Mixed media on hanji · 72.7 × 53 cm" },
-  { image: "raw-016.jpg", title: "To Freely Bloom 15", year: "2024", meta: "한지에 혼합재료 · 72.7 × 53 cm", metaEn: "Mixed media on hanji · 72.7 × 53 cm" },
-  { image: "raw-017.jpg", title: "탑, 꽃 피우다 21", titleEn: "Pagoda in Bloom 21", year: "2024", meta: "한지에 신암채 · 41 × 32 cm", metaEn: "New mineral pigments on hanji · 41 × 32 cm" },
-  { image: "raw-018.jpg", title: "To Freely Bloom 4", year: "2024", meta: "한지에 혼합재료 · 63 × 46 cm", metaEn: "Mixed media on hanji · 63 × 46 cm" },
-  { image: "raw-019.jpg", title: "To Freely Bloom 5", year: "2024", meta: "한지에 신암채 · 65 × 35 cm", metaEn: "New mineral pigments on hanji · 65 × 35 cm" },
-  { image: "raw-020.jpg", title: "To Freely Bloom 16", year: "2024", meta: "한지에 혼합재료 · 72.7 × 53 cm", metaEn: "Mixed media on hanji · 72.7 × 53 cm" },
-  { image: "raw-021.jpg", title: "To Freely Bloom 17", year: "2024", meta: "한지에 신암채, 자개 · 72.7 × 53 cm", metaEn: "New mineral pigments and mother-of-pearl on hanji · 72.7 × 53 cm" },
-  { image: "raw-022.jpg", title: "회접요사제탑", titleEn: "Pagoda of Assembly and Continuity", year: "2025", meta: "춘포에 신암채, 금박, 스와로브스키 · 100 × 30.1 cm", metaEn: "New mineral pigments, gold leaf, Swarovski crystals on ramie · 100 × 30.1 cm" },
-  { image: "raw-023.jpg", title: "Pagoda of Longevity and Blessing", year: "2025", meta: "삼베에 신암채, 금박 · 121.9 × 61 cm", metaEn: "New mineral pigments and gold leaf on hemp · 121.9 × 61 cm" },
-  { image: "raw-024.jpg", title: "탑, 꽃 피우다 5", titleEn: "Pagoda in Bloom 5", year: "2024", meta: "한지에 신암채 · 41 × 27.5 cm", metaEn: "New mineral pigments on hanji · 41 × 27.5 cm" },
-  { image: "raw-025.jpg", title: "탑, 꽃 피우다 16", titleEn: "Pagoda in Bloom 16", year: "2024", meta: "옻지에 신암채 · 41 × 24.5 cm", metaEn: "New mineral pigments on lacquered paper · 41 × 24.5 cm" },
-  { image: "raw-026.jpg", title: "탑, 꽃 피우다 19", titleEn: "Pagoda in Bloom 19", year: "2024", meta: "한지에 신암채 · 41 × 32 cm", metaEn: "New mineral pigments on hanji · 41 × 32 cm" }
-];
+const INITIAL_WORKS = 6;
+const artworkDataPath = isEnglish ? "../data/artworks.json" : "data/artworks.json";
+let works = [];
 
 function parseCvMarkdown(markdown) {
   const sections = new Map();
@@ -230,26 +212,50 @@ async function loadCv() {
 
 const grid = document.querySelector("#work-grid");
 const dialog = document.querySelector("#art-dialog");
+const showMore = document.querySelector("#show-more");
+const showMoreAction = showMore.closest(".section-action");
 let activeIndex = 0;
 
-works.forEach((work, index) => {
-  const title = isEnglish && work.titleEn ? work.titleEn : work.title;
-  const meta = isEnglish ? work.metaEn : work.meta;
+function localizedArtworkField(work, field) {
+  return work[field][isEnglish ? "en" : "ko"];
+}
+
+function artworkMeta(work) {
+  return `${localizedArtworkField(work, "medium")} · ${work.size}`;
+}
+
+function createWorkCard(work, index) {
+  const title = localizedArtworkField(work, "title");
+  const meta = artworkMeta(work);
   const card = document.createElement("figure");
-  card.className = `work-card reveal${index >= 6 ? " hidden" : ""}`;
+  card.className = `work-card reveal${index >= INITIAL_WORKS ? " hidden" : ""}`;
   card.tabIndex = 0;
   card.dataset.index = index;
   card.setAttribute("role", "button");
   card.setAttribute("aria-label", `${title}: ${copy.view}`);
-  card.innerHTML = `
-    <div class="work-image">
-      <img src="${artworkPath}${work.image}" alt="${copy.artist}, ${title}, ${work.year}" loading="${index < 3 ? "eager" : "lazy"}" decoding="async">
-    </div>
-    <figcaption>
-      <span class="work-title">${title}</span>
-      <span class="work-year">${work.year}</span>
-      <span class="work-meta">${meta}</span>
-    </figcaption>`;
+
+  const imageContainer = document.createElement("div");
+  imageContainer.className = "work-image";
+  const image = document.createElement("img");
+  image.src = `${artworkPath}${work.image}`;
+  image.alt = `${copy.artist}, ${title}, ${work.year}`;
+  image.loading = index < 3 ? "eager" : "lazy";
+  image.decoding = "async";
+  imageContainer.append(image);
+
+  const caption = document.createElement("figcaption");
+  const titleText = document.createElement("span");
+  titleText.className = "work-title";
+  titleText.textContent = title;
+  const year = document.createElement("span");
+  year.className = "work-year";
+  year.textContent = work.year;
+  const metadata = document.createElement("span");
+  metadata.className = "work-meta";
+  metadata.textContent = meta;
+  caption.append(titleText, year, metadata);
+  card.append(imageContainer, caption);
+
   card.addEventListener("click", () => openDialog(index));
   card.addEventListener("keydown", event => {
     if (event.key === "Enter" || event.key === " ") {
@@ -257,14 +263,50 @@ works.forEach((work, index) => {
       openDialog(index);
     }
   });
-  grid.append(card);
-});
+  return card;
+}
+
+function renderWorks() {
+  grid.replaceChildren(...works.map(createWorkCard));
+  grid.setAttribute("aria-busy", "false");
+
+  const hiddenCount = Math.max(works.length - INITIAL_WORKS, 0);
+  if (hiddenCount > 0) {
+    showMore.querySelector("span").textContent = `+${hiddenCount}`;
+    showMoreAction.hidden = false;
+  }
+
+  const hero = works.find(work => work.hero === true) ?? works[0];
+  const heroTitle = localizedArtworkField(hero, "title");
+  document.querySelector("[data-hero-image]").src = `${artworkPath}${hero.image}`;
+  document.querySelector("[data-hero-caption]").textContent = `${heroTitle}, ${hero.year}`;
+  observeReveals();
+}
+
+async function loadWorks() {
+  try {
+    const response = await fetch(artworkDataPath, { cache: "no-cache" });
+    if (!response.ok) throw new Error(`Artwork request failed: ${response.status}`);
+    const data = await response.json();
+    if (!Array.isArray(data) || !data.length) throw new Error("Artwork data is empty");
+    works = data;
+    renderWorks();
+  } catch (error) {
+    console.error(error);
+    const message = document.createElement("p");
+    message.className = "cv-loading cv-error";
+    message.textContent = copy.worksError;
+    grid.replaceChildren(message);
+    grid.setAttribute("aria-busy", "false");
+    showMoreAction.hidden = true;
+  }
+}
 
 function openDialog(index) {
   activeIndex = index;
   const work = works[index];
-  const title = isEnglish && work.titleEn ? work.titleEn : work.title;
-  const meta = isEnglish ? work.metaEn : work.meta;
+  const title = localizedArtworkField(work, "title");
+  const meta = artworkMeta(work);
   dialog.querySelector("img").src = `${artworkPath}${work.image}`;
   dialog.querySelector("img").alt = `${copy.artist}, ${title}, ${work.year}`;
   dialog.querySelector("figcaption").textContent = `${title}, ${meta}, ${work.year}`;
@@ -287,10 +329,9 @@ document.addEventListener("keydown", event => {
   if (event.key === "ArrowRight") moveDialog(1);
 });
 
-const showMore = document.querySelector("#show-more");
 showMore.addEventListener("click", () => {
   document.querySelectorAll(".work-card.hidden").forEach(card => card.classList.remove("hidden"));
-  showMore.closest(".section-action").remove();
+  showMoreAction.remove();
   observeReveals();
 });
 
@@ -327,4 +368,5 @@ function observeReveals() {
 }
 observeReveals();
 document.querySelector("#year").textContent = new Date().getFullYear();
+loadWorks();
 loadCv();

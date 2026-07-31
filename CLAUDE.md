@@ -7,6 +7,7 @@
 - 원본 PDF, 생년월일, 전화번호를 Git 또는 공개 사이트에 추가하지 않는다.
 - 정식 사이트는 `https://jinhyunjin.github.io/`이며 정식 저장소는 `jinhyunjin/jinhyunjin.github.io`다.
 - 작품 갤러리는 동일한 4:5 프레임에서 작품 전체가 보이도록 유지한다.
+- 작품 정보·순서·대표작은 `data/artworks.json`에서 관리하고 검증 스크립트를 실행한다.
 - Artist Statement는 장식 한자 없이 단일 컬럼으로 유지한다.
 - 작가 이력과 전시는 `ARTIST_CV.md`와 `ARTIST_CV_EN.md`를 함께 수정하고 기존 Markdown 형식을 유지한다.
 - 변경 후 모바일과 데스크톱을 검증하고 GitHub Actions 성공 여부를 확인한다.

@@ -23,6 +23,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Validate artwork data
+        run: node scripts/validate-artworks.mjs
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Prepare static site
@@ -30,6 +32,7 @@ jobs:
           mkdir _site
           cp index.html styles.css script.js ARTIST_CV.md ARTIST_CV_EN.md .nojekyll _site/
           cp -R assets _site/assets
+          cp -R data _site/data
           cp -R en _site/en
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
