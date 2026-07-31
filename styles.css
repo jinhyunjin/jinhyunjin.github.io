@@ -27,6 +27,7 @@ img { display: block; max-width: 100%; }
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
   overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
 }
+.mobile-line-break { display: none; }
 .skip-link {
   position: fixed; z-index: 100; top: .5rem; left: .5rem; padding: .7rem 1rem;
   background: var(--ink); color: white; transform: translateY(-150%);
@@ -157,6 +158,7 @@ footer > a:last-child { justify-self: end; }
 @keyframes rise { from { opacity: 0; transform: translateY(28px); } }
 
 @media (max-width: 800px) {
+  .mobile-line-break { display: inline; }
   .site-header { height: 68px; padding: 0 1.2rem; }
   .menu-button { display: grid; gap: 6px; z-index: 2; }
   .site-header:not(.scrolled) .menu-button { color: white; filter: drop-shadow(0 1px 6px rgba(0, 0, 0, .3)); }
