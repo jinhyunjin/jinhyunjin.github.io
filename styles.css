@@ -160,6 +160,8 @@ footer > a:last-child { justify-self: end; }
   .site-header { height: 68px; padding: 0 1.2rem; }
   .menu-button { display: grid; gap: 6px; z-index: 2; }
   .site-header:not(.scrolled) .menu-button { color: white; filter: drop-shadow(0 1px 6px rgba(0, 0, 0, .3)); }
+  .menu-open .site-header { backdrop-filter: none; -webkit-backdrop-filter: none; }
+  .menu-open .site-header > .brand { position: relative; z-index: 2; }
   .menu-open .site-header .brand, .menu-open .site-header .menu-button { color: var(--ink); text-shadow: none; filter: none; }
   .menu-button i { display: block; width: 24px; height: 1px; background: currentColor; transition: .25s; }
   .menu-open .menu-button i:first-of-type { transform: translateY(3.5px) rotate(45deg); }
