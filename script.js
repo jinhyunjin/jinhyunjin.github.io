@@ -236,7 +236,7 @@ works.forEach((work, index) => {
   const title = isEnglish && work.titleEn ? work.titleEn : work.title;
   const meta = isEnglish ? work.metaEn : work.meta;
   const card = document.createElement("figure");
-  card.className = `work-card reveal${index >= 7 ? " hidden" : ""}`;
+  card.className = `work-card reveal${index >= 6 ? " hidden" : ""}`;
   card.tabIndex = 0;
   card.dataset.index = index;
   card.setAttribute("role", "button");
