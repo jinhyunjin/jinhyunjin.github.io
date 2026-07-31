@@ -12,8 +12,8 @@ render updates automatically.
 
 - Ph.D. coursework completed in Buddhist Art, Department of Fine Arts, Dongguk University Graduate School
 - Master of Intellectual Property (MIP), Hongik University Graduate School
-- Certified Cultural Heritage Repair Technician (Painting Reproduction), No. 7912
-- Apprentice in Buddhist Painting, National Intangible Cultural Heritage No. 118
+- National Heritage Maintenance Technician (Copist/Replicator for Artwork), No. 7912
+- Trainee for National Intangible Cultural Heritage No. 118, Bulhwajang (Buddhist Painting)
 
 ## Awards
 
@@ -50,13 +50,13 @@ render updates automatically.
 - 2025.12.27-2026.1.5 《Balwon: Wishing, Again and Again》, Solo Exhibition, Gallery Hanok, Seoul
 - 2025.12.18-12.24 《3rd Dongguk University Buddhist Art Association Exhibition》, Dongguk Gallery, Seoul
 - 2025.9.24-9.28 《2025 GOTAEK ART FESTA》, Imcheonggak House, Andong
-- 2025.9.9-9.23 《Layers to Bloom》, Kim Minji & Jin Hyun-jin, Gallery Trin, Incheon
+- 2025.9.9-9.23 《Layers to Bloom》, Kim Minji & Jin Hyun-jin, Gallery T-in, Incheon
 - 2025.9.1-9.30 《Pagoda in Bloom》, Solo Exhibition, Suwon SK Artrium Art Gallery, Suwon
 - 2025.7.18-7.23 《ZERO BASE》, Seoul Auction Gangnam Center, Seoul
 - 2025.7.10-7.13 《ZERO BASE》, Dongtan Art Space, Hwaseong
 - 2025.6.19-6.30 《Buddhist Dharma, Shared Origin》, Dongguk Gallery, Seoul
 - 2025.5.30-6.27 《OPEN STORAGE 2025》, Gyeonggi Sangsang Campus, Gongjak 1967, Suwon
-- 2025.4.15-4.20 《2025 Breeze Art Fair》, Hangaram Art Museum, Seoul Arts Center, Seoul
+- 2025.4.15-4.20 《2025 Breeze Art Fair》, Hangaram Art Museum in Seoul Arts Center, Seoul
 - 2024.12.31-2025.1.5 《To Freely Bloom》, Solo Exhibition, Bukchon Hanok Hall, Seoul
 - 2024.12.31-2025.1.20 《Buddhist Dharma, Shared Origin》, Group Exhibition, Zhizhi Hall, Lingyin Temple, Hangzhou, China
 - 2024.12.19-12.25 《2nd Dongguk University Buddhist Art Association Exhibition》, Dongguk Gallery, Seoul
