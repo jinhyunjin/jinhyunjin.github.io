@@ -40,7 +40,6 @@ render updates automatically.
 ## Exhibitions & Activities
 
 - (Scheduled) 2026.10.15-10.18 《2026 GOTAEK ART FESTA》, Imcheonggak House, Andong
-- (Scheduled) 2026.8.6-8.9 《Bank Artfair》, Suwon Convention Center, Suwon
 - 2026.7.26-8.22 《Mind, Rising》, Solo Exhibition, Dongtan Beodeunamu Craft, Hwaseong
 - 2026.7.17-7.19 《GAF Seoul Preview — Time Traveler Information Center》, Look Inside Gallery, Seoul
 - 2026.5.15-6.23 《Landscapes on Canvas, Everyday Life Shaped in Clay》, 12-Artist Exhibition, Art Musée Gallery 2, Panesima Cultural Complex, Yongin
