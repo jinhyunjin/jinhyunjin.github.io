@@ -39,7 +39,7 @@ render updates automatically.
 
 ## Exhibitions & Activities
 
-- (Scheduled) 11.10–11.22 《Grandeur Blooming Through Time》, Suwon Municipal Buksuwon Exhibition Hall, Suwon
+- (Scheduled) 11.10–11.22 《Grandeur Blooming Through Time》, Solo Exhibition, Suwon Municipal Buksuwon Exhibition Hall, Suwon
 - 2026.10.15-10.18 《2026 GOTAEK ART FESTA》, Imcheonggak House, Andong
 - 2026.7.26-8.22 《Mind, Rising》, Solo Exhibition, Dongtan Beodeunamu Craft, Hwaseong
 - 2026.7.17-7.19 《GAF Seoul Preview — Time Traveler Information Center》, Look Inside Gallery, Seoul
